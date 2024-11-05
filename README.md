@@ -8,7 +8,7 @@
 # Setup
 - Open Terminal
 - CD to Directory
-- Download package using 'git clone https://github.com/realdarter/Spam-Detection-Logistic-Regression'
+- Download package using 'git clone https://github.com/realdarter/TopKImageClassifier'
 - Using Python run the main.py
 
 
