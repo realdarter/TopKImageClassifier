@@ -274,25 +274,3 @@ def predict_images(img_path, model, classes, args):
 
     return top_k_labels, top_k_probs
 
-if __name__ == '__main__':
-    data_dir = 'data/garbage_classification'
-    model_dir = 'saved_models'
-
-    args = create_args(
-        num_epochs=2, 
-        batch_size=32, 
-        learning_rate=1e-5, 
-        save_every=500, 
-        max_length=256, 
-        temperature=1.0, 
-        top_k=5, 
-        top_p=0.9, 
-        repetition_penalty=1.0
-        )
-    
-    train(data_dir=data_dir, model_dir=model_dir, args=args)
-    #12 epochs (sweetspot for now)
-    model, epoch, classes = load_model(model_dir)
-    # Test Top-k prediction
-    test_image_path = r'C:\Users\minec\Downloads\test\metal.jpg'
-    predict_images(test_image_path, model, classes, args)
